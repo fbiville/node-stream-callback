@@ -1,0 +1,24 @@
+{
+  "name": "stream-callback",
+  "version": "1.0.0",
+  "description": "exhibit behavior change of stream's callback parameter",
+  "main": "square-stream.js",
+  "scripts": {
+    "test": "npm run jasmine",
+    "jasmine": "jasmine"
+  },
+  "repository": "git@github.com:fbiville/node-stream-callback.git",
+  "keywords": [
+    "streams",
+    "callback"
+  ],
+  "author": "Florent Biville <fbiville@pivotal.io>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/fbiville/node-stream-callback/issues"
+  },
+  "homepage": "https://github.com/fbiville/node-stream-callback#readme",
+  "devDependencies": {
+    "jasmine": "^3.5.0"
+  }
+}
