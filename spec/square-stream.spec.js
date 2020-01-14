@@ -17,7 +17,7 @@ describe('square stream =>', () => {
         squareStream.on('data', (data) => {
             expect(data).toEqual(expectedData[index++]);
         });
-        squareStream.on('finish', () => {
+        squareStream.on('close', () => {
             expect(index).toEqual(
                 expectedData.length,
                 `${expectedData.length} element(s) to process, but was ${index}`
@@ -39,7 +39,7 @@ describe('square stream =>', () => {
             expect(err.message).toEqual('NaNNaNNaNNaNNaN: batman is not a number!');
             errored = true;
         });
-        squareStream.on('finish', () => {
+        squareStream.on('close', () => {
             expect(errored).toBeTruthy('should have errored');
             done();
         });

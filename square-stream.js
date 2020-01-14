@@ -3,10 +3,7 @@ const {Transform} = require('stream');
 module.exports = class SquareStream extends Transform {
 
     constructor(opts) {
-        super(opts);
-        this.on('error', () => {
-            this.end();
-        });
+        super({ ...opts, autoDestroy: true });
     }
 
     _transform(data, _, callback) {
